@@ -1,0 +1,113 @@
+.rf-panel-row {
+    display: flex;
+
+    align-content: space-between;
+    justify-content: flex-start;
+
+    margin: 0 24px 12px
+}
+
+.rf-logger-panel {
+    flex: 1;
+    background-color: #FCFCFC;
+    padding: 15px;
+}
+
+.rf-logger-panel:not(:last-child) {
+    margin-right: 24px;
+}
+
+.rf-logger-panel__title {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 300;
+    color: #363636;
+}
+
+.rf-logger-panel__title svg {
+    display: inline-block;
+    margin-bottom: -1px;
+    vertical-align: baseline;
+
+    width: 14px;
+    height: 14px;
+}
+
+.rf-logger-panel__property {
+    display: block;
+
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    font-weight: 200;
+}
+
+.rf-logger-html {
+    margin: 0 24px 12px;
+    border: 1px solid #E9EAEA;
+    border-radius: 4px;
+    padding: 20px;
+
+    font-size: 0.75em;
+    line-height: 1.9em;
+}
+
+.rf-logger-html hr {
+    border: 0;
+    background-color: #E9EAEA;
+    height: 1px;
+    color: #E9EAEA;
+}
+
+.rf-logger-html--embedded {
+    margin: 0;
+}
+
+.rf-logger-media {
+    margin: 0 24px 12px;
+    border: 1px solid #E9EAEA;
+    border-radius: 4px;
+
+    max-width: 250px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.rf-logger-media__src {
+    display: block;
+    border-radius: 2px;
+    width: 100%;
+}
+
+.rf-logger-changelog {
+    margin: 0 24px 12px;
+}
+
+.rf-logger-changelog__title {
+    margin: 0 0 12px;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    color: #9A9A9A;
+}
+
+.rf-logger-changelog .diff-html-none {
+
+}
+
+.rf-logger-changelog .diff-html-added {
+    color: green;
+    background: #dfd;
+    text-decoration: none;
+}
+
+.rf-logger-changelog .diff-html-removed {
+    color: red;
+    background: #fdd;
+    text-decoration: line-through;
+}
+
+.rf-logger-changelog .diff-html-changed {
+    color: #008;
+    background: #eef;
+    text-decoration: none;
+}
