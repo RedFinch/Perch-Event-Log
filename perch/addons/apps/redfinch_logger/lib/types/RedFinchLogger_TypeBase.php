@@ -109,7 +109,7 @@ abstract class RedFinchLogger_TypeBase
      */
     public function setContent($content)
     {
-        $this->content = $content;
+        $this->content = strip_tags($content);
 
         return $this;
     }
