@@ -71,7 +71,7 @@ $Listing->add_col([
     'title'     => 'Date / Time',
     'value'     => 'eventTriggeredFormatted',
     'sort'      => 'eventTriggered',
-    'edit_link' => 'view'
+    'edit_link' => 'view',
 ]);
 
 $Listing->add_col([
@@ -84,6 +84,15 @@ $Listing->add_col([
         $user = array_values($user)[0];
 
         return $user->userUsername();
+    },
+    'gravatar'  => function($event) use ($users) {
+        $user = array_filter($users, function ($item) use ($event) {
+            return $item->id() === $event->eventUserID();
+        });
+
+        $user = array_values($user)[0];
+
+        return $user->userEmail();
     }
 ]);
 
