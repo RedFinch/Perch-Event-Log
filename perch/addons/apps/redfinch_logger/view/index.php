@@ -18,7 +18,9 @@ $Settings = $API->get('Settings');
 
 // Page settings
 $Perch->page_title = $Lang->get('View Log');
+$Perch->add_css($API->app_path() . '/assets/css/prism.css');
 $Perch->add_css($API->app_path() . '/assets/css/redfinch_logger.css');
+$Perch->add_javascript($API->app_path() . '/assets/js/prism-min.js');
 
 // Page Initialising
 include('../modes/_subnav.php');

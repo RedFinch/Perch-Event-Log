@@ -89,6 +89,16 @@ class RedFinchLogger_Event extends PerchAPI_Base
     }
 
     /**
+     * Returns formatted date
+     *
+     * @return string
+     */
+    public function eventTriggeredFormatted()
+    {
+        return DateTime::createFromFormat('Y-m-d H:i:s', $this->eventTriggered())->format('H:i:s d/m/Y');
+    }
+
+    /**
      * Retrieves nested subject id from serialized column
      *
      * @return int

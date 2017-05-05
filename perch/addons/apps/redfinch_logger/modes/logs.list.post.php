@@ -69,7 +69,7 @@ $Listing = new PerchAdminListing($CurrentUser, $HTML, $Lang, $Paging);
 
 $Listing->add_col([
     'title'     => 'Date / Time',
-    'value'     => 'eventTriggered',
+    'value'     => 'eventTriggeredFormatted',
     'sort'      => 'eventTriggered',
     'edit_link' => 'view'
 ]);

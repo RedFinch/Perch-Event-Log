@@ -40,11 +40,7 @@ if($event->eventUserID()) {
 if(isset($_GET['section']) && $_GET['section'] === 'history') {
     $activeSection = 'history';
 
-    $Template->set_from_string('
-        <perch:logger id="subject_title" />
-        <hr /> 
-        <perch:logger id="subject_content" />',
-    'logger');
+    $Template->set_from_string('<perch:logger id="subject_title" /><hr /><perch:logger id="subject_content" />', 'logger');
 
     require(__DIR__ . '/../lib/htmldiff/html_diff.php');
 }

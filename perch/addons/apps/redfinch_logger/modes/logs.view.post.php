@@ -77,9 +77,9 @@ echo $Smartbar->render();
     <?php if($event->eventSubjectContent()): ?>
         <?php echo $HTML->heading2('Content'); ?>
         <div class="rf-logger-html">
-            <code>
-                <?php echo $HTML->encode($event->eventSubjectContent()); ?>
-            </code>
+            <pre><code class="language-markup "><?php
+                echo $HTML->encode($event->eventSubjectContent());
+            ?></code></pre>
         </div>
     <?php endif; ?>
 
@@ -105,11 +105,11 @@ echo $Smartbar->render();
 
             if($this_html !== $prev_html) {
                 echo '<div class="rf-logger-changelog">';
-                    echo '<h4 class="rf-logger-changelog__title">' . $revision->eventTriggered() . '</h4>';
+                    echo '<h4 class="rf-logger-changelog__title">' . $revision->eventTriggeredFormatted() . '</h4>';
                     echo '<div class="rf-logger-html rf-logger-html--embedded">';
-                        echo '<code>';
+                        echo '<pre><code class="language-markup">';
                             echo html_diff($prev_html, $this_html);
-                        echo '</code>';
+                        echo '</code></pre>';
                     echo '</div>';
                 echo '</div>';
             }

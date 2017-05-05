@@ -1,7 +1,6 @@
 .rf-panel-row {
     display: flex;
-
-    align-content: space-between;
+    flex-wrap: wrap;
     justify-content: flex-start;
 
     margin: 0 24px 12px
@@ -9,12 +8,34 @@
 
 .rf-logger-panel {
     flex: 1;
-    background-color: #FCFCFC;
     padding: 15px;
+    text-align: center;
 }
 
 .rf-logger-panel:not(:last-child) {
     margin-right: 24px;
+}
+
+@media (max-width: 980px) {
+    .rf-panel-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .rf-logger-panel {
+        flex: none;
+        width: 50%;
+    }
+
+    .rf-logger-panel:not(:last-child) {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .rf-logger-panel {
+        width: 100%;
+    }
 }
 
 .rf-logger-panel__title {
@@ -45,10 +66,15 @@
     margin: 0 24px 12px;
     border: 1px solid #E9EAEA;
     border-radius: 4px;
-    padding: 20px;
 
     font-size: 0.75em;
     line-height: 1.9em;
+
+}
+
+.rf-logger-html pre {
+    border-radius: 3px;
+    margin: 5px !important;
 }
 
 .rf-logger-html hr {
