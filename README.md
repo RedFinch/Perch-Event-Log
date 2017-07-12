@@ -2,6 +2,8 @@
 
 The Perch Event Logger tracks the activity of users with access to your CMS. This can be useful when assisting clients or for auditing your content editors.
 
+![Admin](https://redfinch.github.io/Perch-Event-Logger/admin-preview.png)
+
 ## Installation
 
 ### Requirements

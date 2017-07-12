@@ -36,6 +36,10 @@ $UserPrivileges = $API->get('UserPrivileges');
 $UserPrivileges->create_privilege('redfinch_logger', 'Access the logger app');
 //$UserPrivileges->create_privilege('redfinch_logger.clear', 'Clear the logger data');
 
+// Settings
+$Settings = $API->get('Settings');
+$Settings->set('redfinch_logger_gc', 90);
+
 // Installation check
 $sql = 'SHOW TABLES LIKE "' . $this->table . '"';
 $result = $this->db->get_value($sql);

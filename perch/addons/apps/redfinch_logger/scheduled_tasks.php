@@ -30,7 +30,7 @@ function redfinch_logger_run_event_gc($last_run_date)
         ];
     } else {
         return [
-            'result'  => 'WARNING',
+            'result'  => 'OK',
             'message' => 'No logs were pruned.'
         ];
     }

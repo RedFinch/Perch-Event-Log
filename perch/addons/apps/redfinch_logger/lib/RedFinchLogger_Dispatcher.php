@@ -92,7 +92,7 @@ class RedFinchLogger_Dispatcher
             'eventType'        => $this->getEventType(),
             'eventAction'      => $this->getEventAction(),
             'eventSubjectID'   => $this->getSubjectID(),
-            'eventSubjectData' => $this->getSubjectData(),
+            'eventSubjectData' => trim($this->getSubjectData()),
             'eventUserID'      => ($this->user) ? $this->user->id() : 0,
             'eventTriggered'   => date('Y-m-d H:i:s')
         ];

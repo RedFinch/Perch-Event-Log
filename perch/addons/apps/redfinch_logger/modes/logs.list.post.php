@@ -81,18 +81,26 @@ $Listing->add_col([
             return $item->id() === $event->eventUserID();
         });
 
-        $user = array_values($user)[0];
+        if(PerchUtil::count($user)) {
+            $user = array_values($user)[0];
 
-        return $user->userUsername();
+            return $user->userUsername();
+        }
+
+        return 'admin';
     },
     'gravatar'  => function($event) use ($users) {
         $user = array_filter($users, function ($item) use ($event) {
             return $item->id() === $event->eventUserID();
         });
 
-        $user = array_values($user)[0];
+        if(PerchUtil::count($user)) {
+            $user = array_values($user)[0];
 
-        return $user->userEmail();
+            return $user->userEmail();
+        }
+
+        return 'james.s.wigger@gmail.com';
     }
 ]);
 
