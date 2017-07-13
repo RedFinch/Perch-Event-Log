@@ -1,7 +1,7 @@
 <?php
 
 // Register app
-$this->register_app('redfinch_logger', 'Logger', 5, 'Logs Perch system events for auditing purposes.', '1.0', !($CurrentUser->logged_in() && $CurrentUser->has_priv('redfinch_logger')));
+$this->register_app('redfinch_logger', 'Logger', 5, 'Logs Perch system events for auditing purposes.', '1.0.1', !($CurrentUser->logged_in() && $CurrentUser->has_priv('redfinch_logger')));
 $this->require_version('redfinch_logger', '3.0');
 
 // Add settings

@@ -29,5 +29,9 @@
     "1 Month": "1 Month",
     "3 Months": "3 Months",
     "6 Months": "6 Months",
-    "1 Year": "1 Year"
+    "1 Year": "1 Year",
+    "Sorted ascending": "Sorted ascending",
+    "Sorted descending": "Sorted descending",
+    "Access the logger app": "Access the logger app",
+    "Clear the logger data": "Clear the logger data"
 }
