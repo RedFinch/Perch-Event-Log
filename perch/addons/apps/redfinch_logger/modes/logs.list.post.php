@@ -100,7 +100,7 @@ $Listing->add_col([
             return $user->userEmail();
         }
 
-        return 'james.s.wigger@gmail.com';
+        return '';
     }
 ]);
 
